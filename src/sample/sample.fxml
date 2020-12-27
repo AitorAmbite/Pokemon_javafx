@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" gridLinesVisible="true" hgap="10" prefHeight="700.0" prefWidth="900.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Pokemon_controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <GridPane fx:id="fondoSeleccion" prefHeight="411.0" prefWidth="502.0" style="-fx-background-color: #0088cc;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox fx:id="pokemonLayout_1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <GridPane id="Nombre" alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonName_1" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="p_name 1" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="pokemonLvl_1" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="225.0" text="lvl 1" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </GridPane>
+                  <ImageView fx:id="pokemonImage_1" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sprites/bulbasaur.png" />
+                     </image></ImageView>
+                  <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar fx:id="psBar_1" prefHeight="12.0" prefWidth="138.0" progress="1.0" style="-fx-border-color: black; -fx-border-radius: 20;" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="DISAPPEAR" />
+                           </cursor>
+                           <effect>
+                              <ColorAdjust hue="-0.6" saturation="-1.0" />
+                           </effect></ProgressBar>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="PS" textAlignment="CENTER" textFill="#f57403" textOverrun="CENTER_ELLIPSIS" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="Arial Black" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane id="Nombre" alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonLife_1" alignment="CENTER" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="Vida 1" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </GridPane>
+               </children></VBox>
+            <VBox fx:id="pokemonLayout_2" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonName_2" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="p_name 2" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="pokemonLvl_2" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="225.0" text="lvl 1" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </GridPane>
+                  <ImageView fx:id="pokemonImage_2" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sprites/ivysaur.png" />
+                     </image></ImageView>
+                  <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar fx:id="psBar_2" prefHeight="12.0" prefWidth="138.0" progress="1.0" style="-fx-border-color: black; -fx-border-radius: 20;" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="DISAPPEAR" />
+                           </cursor>
+                           <effect>
+                              <ColorAdjust hue="-0.79" />
+                           </effect>
+                        </ProgressBar>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="PS" textAlignment="CENTER" textFill="#f57403" textOverrun="CENTER_ELLIPSIS" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="Arial Black" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane id="Nombre" alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonLife_2" alignment="CENTER" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="Vida 2" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox fx:id="pokemonLayout_3" alignment="CENTER" layoutX="437.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonName_3" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="p_name 3" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="pokemonLvl_3" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="225.0" text="lvl 1" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </GridPane>
+                  <ImageView fx:id="pokemonImage_3" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sprites/venusaur.png" />
+                     </image></ImageView>
+                  <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar fx:id="psBar_3" prefHeight="12.0" prefWidth="138.0" progress="1.0" style="-fx-border-color: black; -fx-border-radius: 20;" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="DISAPPEAR" />
+                           </cursor>
+                           <effect>
+                              <ColorAdjust hue="-0.6" />
+                           </effect>
+                        </ProgressBar>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="20.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="PS" textAlignment="CENTER" textFill="#f57403" textOverrun="CENTER_ELLIPSIS" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="Arial Black" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane id="Nombre" alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonLife_3" alignment="CENTER" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="Vida 3" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox fx:id="pokemonLayout_4" alignment="CENTER" layoutX="437.0" layoutY="191.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonName_4" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="p_name 4" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="pokemonLvl_4" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="64.0" text="lvl 1" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </GridPane>
+                  <ImageView fx:id="pokemonImage_4" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sprites/charmander.png" />
+                     </image></ImageView>
+                  <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar fx:id="psBar_4" prefHeight="12.0" prefWidth="138.0" progress="1.0" style="-fx-border-color: black; -fx-border-radius: 20;" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="DISAPPEAR" />
+                           </cursor>
+                           <effect>
+                              <ColorAdjust hue="-0.6" />
+                           </effect>
+                        </ProgressBar>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="PS" textAlignment="CENTER" textFill="#f57403" textOverrun="CENTER_ELLIPSIS" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="Arial Black" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane id="Nombre" alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonLife_4" alignment="CENTER" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="Vida 4" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox fx:id="pokemonLayout_5" alignment="CENTER" layoutX="10.0" layoutY="191.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonName_5" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="p_name 5" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="pokemonLvl_5" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="225.0" text="lvl 1" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </GridPane>
+                  <ImageView fx:id="pokemonImage_5" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sprites/charmeleon.png" />
+                     </image></ImageView>
+                  <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar fx:id="psBar_5" prefHeight="12.0" prefWidth="138.0" progress="1.0" style="-fx-border-color: black; -fx-border-radius: 20;" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="DISAPPEAR" />
+                           </cursor>
+                           <effect>
+                              <ColorAdjust hue="-0.6" />
+                           </effect>
+                        </ProgressBar>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="22.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="PS" textAlignment="CENTER" textFill="#f57403" textOverrun="CENTER_ELLIPSIS" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="Arial Black" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane id="Nombre" alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonLife_5" alignment="CENTER" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="Vida 5" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox fx:id="pokemonLayout_6" alignment="CENTER" layoutX="10.0" layoutY="371.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="178.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonName_6" alignment="TOP_LEFT" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="p_name 6" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="pokemonLvl_6" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="225.0" text="lvl 1" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font></Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </GridPane>
+                  <ImageView fx:id="pokemonImage_6" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sprites/charizard.png" />
+                     </image></ImageView>
+                  <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar fx:id="psBar_6" prefHeight="12.0" prefWidth="138.0" progress="1.0" style="-fx-border-color: black; -fx-border-radius: 20;" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="DISAPPEAR" />
+                           </cursor>
+                           <effect>
+                              <ColorAdjust hue="-0.6" />
+                           </effect>
+                        </ProgressBar>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="22.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="PS" textAlignment="CENTER" textFill="#f57403" textOverrun="CENTER_ELLIPSIS" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="Arial Black" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane id="Nombre" alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="pokemonLife_6" alignment="CENTER" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: white;" text="Vida 6" textFill="WHITE" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Arial Unicode MS" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </GridPane>
+               </children>
+            </VBox>
+            <Button fx:id="nextButton" alignment="CENTER" contentDisplay="CENTER" disable="true" maxHeight="27.0" maxWidth="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="11.0" prefWidth="101.0" style="-fx-background-color: #ebfaeb; -fx-border-color: #ebfaeb; -fx-text-fill: black;" text="SIGUIENTE" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Bodoni MT Black" size="12.0" />
+               </font></Button>
+            <Button fx:id="basuraButton" alignment="CENTER" layoutX="378.0" layoutY="388.0" maxHeight="27.0" maxWidth="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onClickBasura" prefHeight="11.0" prefWidth="101.0" style="-fx-background-color: #ff0066; -fx-border-color: #ff0066; -fx-text-fill: black;" text="A LA BASURA!" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Bodoni MT Black" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
