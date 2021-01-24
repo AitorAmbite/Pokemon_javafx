@@ -28,7 +28,7 @@
             <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <VBox fx:id="pokemonLayout_1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="pokemonLayout_1" alignment="CENTER" onMouseClicked="#onClickPokemon" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <GridPane id="Nombre" alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
                      <columnConstraints>
@@ -55,10 +55,7 @@
                         <Insets />
                      </VBox.margin>
                   </GridPane>
-                  <ImageView fx:id="pokemonImage_1" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_1" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../sprites/bulbasaur.png" />
-                     </image></ImageView>
+                  <ImageView fx:id="pokemonImage_1" fitHeight="90.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
                   <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
                      <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
@@ -73,7 +70,7 @@
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
                            <effect>
-                              <ColorAdjust hue="-0.6" saturation="-1.0" />
+                              <ColorAdjust hue="-0.6" />
                            </effect></ProgressBar>
                         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="PS" textAlignment="CENTER" textFill="#f57403" textOverrun="CENTER_ELLIPSIS" GridPane.halignment="RIGHT">
                            <font>
@@ -102,7 +99,7 @@
                      </opaqueInsets>
                   </GridPane>
                </children></VBox>
-            <VBox fx:id="pokemonLayout_2" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+            <VBox fx:id="pokemonLayout_2" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#onClickPokemon" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
                   <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
                      <columnConstraints>
@@ -129,10 +126,8 @@
                         <Insets />
                      </VBox.margin>
                   </GridPane>
-                  <ImageView fx:id="pokemonImage_2" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_2" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../sprites/ivysaur.png" />
-                     </image></ImageView>
+                  <ImageView fx:id="pokemonImage_2" fitHeight="90.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                     </ImageView>
                   <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
                      <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
@@ -147,7 +142,7 @@
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
                            <effect>
-                              <ColorAdjust hue="-0.79" />
+                              <ColorAdjust hue="-0.6" />
                            </effect>
                         </ProgressBar>
                         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="PS" textAlignment="CENTER" textFill="#f57403" textOverrun="CENTER_ELLIPSIS" GridPane.halignment="RIGHT">
@@ -178,7 +173,7 @@
                   </GridPane>
                </children>
             </VBox>
-            <VBox fx:id="pokemonLayout_3" alignment="CENTER" layoutX="437.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+            <VBox fx:id="pokemonLayout_3" alignment="CENTER" layoutX="437.0" layoutY="10.0" onMouseClicked="#onClickPokemon" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
                <children>
                   <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
                      <columnConstraints>
@@ -205,10 +200,8 @@
                         <Insets />
                      </VBox.margin>
                   </GridPane>
-                  <ImageView fx:id="pokemonImage_3" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_3" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../sprites/venusaur.png" />
-                     </image></ImageView>
+                  <ImageView fx:id="pokemonImage_3" fitHeight="90.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                     </ImageView>
                   <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
                      <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
@@ -254,7 +247,7 @@
                   </GridPane>
                </children>
             </VBox>
-            <VBox fx:id="pokemonLayout_4" alignment="CENTER" layoutX="437.0" layoutY="191.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+            <VBox fx:id="pokemonLayout_4" alignment="CENTER" layoutX="437.0" layoutY="191.0" onMouseClicked="#onClickPokemon" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                <children>
                   <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
                      <columnConstraints>
@@ -281,10 +274,8 @@
                         <Insets />
                      </VBox.margin>
                   </GridPane>
-                  <ImageView fx:id="pokemonImage_4" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../sprites/charmander.png" />
-                     </image></ImageView>
+                  <ImageView fx:id="pokemonImage_4" fitHeight="90.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                     </ImageView>
                   <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
                      <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
@@ -330,7 +321,7 @@
                   </GridPane>
                </children>
             </VBox>
-            <VBox fx:id="pokemonLayout_5" alignment="CENTER" layoutX="10.0" layoutY="191.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <VBox fx:id="pokemonLayout_5" alignment="CENTER" layoutX="10.0" layoutY="191.0" onMouseClicked="#onClickPokemon" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
                   <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="51.0">
                      <columnConstraints>
@@ -357,10 +348,8 @@
                         <Insets />
                      </VBox.margin>
                   </GridPane>
-                  <ImageView fx:id="pokemonImage_5" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_5" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../sprites/charmeleon.png" />
-                     </image></ImageView>
+                  <ImageView fx:id="pokemonImage_5" fitHeight="90.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                     </ImageView>
                   <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
                      <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
@@ -406,7 +395,7 @@
                   </GridPane>
                </children>
             </VBox>
-            <VBox fx:id="pokemonLayout_6" alignment="CENTER" layoutX="10.0" layoutY="371.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <VBox fx:id="pokemonLayout_6" alignment="CENTER" layoutX="10.0" layoutY="371.0" onMouseClicked="#onClickPokemon" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
                   <GridPane alignment="CENTER" prefHeight="17.0" prefWidth="178.0">
                      <columnConstraints>
@@ -433,10 +422,8 @@
                         <Insets />
                      </VBox.margin>
                   </GridPane>
-                  <ImageView fx:id="pokemonImage_6" fitHeight="90.0" fitWidth="130.0" onMouseClicked="#onClickPokemon_6" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../sprites/charizard.png" />
-                     </image></ImageView>
+                  <ImageView fx:id="pokemonImage_6" fitHeight="90.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                     </ImageView>
                   <GridPane alignment="CENTER" prefHeight="19.0" prefWidth="301.0">
                      <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
@@ -482,7 +469,7 @@
                   </GridPane>
                </children>
             </VBox>
-            <Button fx:id="nextButton" alignment="CENTER" contentDisplay="CENTER" disable="true" maxHeight="27.0" maxWidth="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="11.0" prefWidth="101.0" style="-fx-background-color: #ebfaeb; -fx-border-color: #ebfaeb; -fx-text-fill: black;" text="SIGUIENTE" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button fx:id="nextButton" alignment="CENTER" contentDisplay="CENTER" disable="true" maxHeight="27.0" maxWidth="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onClickNext" prefHeight="11.0" prefWidth="101.0" style="-fx-background-color: #ebfaeb; -fx-border-color: #ebfaeb; -fx-text-fill: black;" text="SIGUIENTE" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font name="Bodoni MT Black" size="12.0" />
                </font></Button>

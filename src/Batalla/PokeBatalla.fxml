@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: sprites\xp_background.jpg;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Batalla.PokeBatalla_controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FDFFE3; -fx-border-color: BLACK; -fx-border-width: 3; -fx-border-radius: 5;" translateX="20.0">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lvl_enemigo" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="name_enemigo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+            <ProgressBar fx:id="ps_enemy" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="150.0" progress="1.0" translateX="40.0" translateY="30.0">
+               <effect>
+                  <ColorAdjust hue="-0.6" />
+               </effect></ProgressBar>
+         </children></AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FDFFE3; -fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 5;" translateX="50.0" translateY="-20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lvl_poke" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="name_poke" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+            <ProgressBar fx:id="ps_self" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="150.0" progress="1.0" translateX="40.0" translateY="30.0">
+               <effect>
+                  <ColorAdjust hue="-0.6" />
+               </effect></ProgressBar>
+         </children></AnchorPane>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <Button fx:id="atacar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onClickAtaque" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #fc42c1;" text="Atacar">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></Button>
+            <Button fx:id="curar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#heal" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #ffa200;" text="Curar" />
+         </children>
+      </VBox>
+      <ImageView fx:id="imagen_pokemon" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" translateX="75.0" GridPane.rowIndex="2" />
+      <ImageView fx:id="image_enemigo" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" translateX="80.0" GridPane.columnIndex="1" />
+      <GridPane fx:id="ataques_grid" visible="false" GridPane.rowIndex="3">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="muyArriesgado" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#veryRiskyAttack" style="-fx-background-color: #2271b3; -fx-background-radius: 0;" text="Ataque muy arriesgado" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="cancelar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#onClickCancelar" style="-fx-background-color: #838487; -fx-background-radius: 0;" text="Cancelar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="seguro" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#attack" style="-fx-background-color: #10c3e3; -fx-background-radius: 0;" text="Ataque seguro" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="arriesgado" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#riskAttack" style="-fx-background-color: #dae012; -fx-background-radius: 0;" text="Ataque arriesgado" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
