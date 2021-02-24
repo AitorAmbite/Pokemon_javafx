@@ -1,5 +1,6 @@
 package Batalla;
 
+import Grafico.GraficoController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
@@ -16,6 +17,7 @@ import java.util.Random;
 public class PokeBatalla_controller {
     Pokemon pokemon;
     Pokemon enemigo = new Pokemon("Bulbasaur", 220, 220, 20,new Image("sprites/bulbasaur.png"));
+    GraficoController controllerGrafico;
 
     @FXML
     ImageView imagen_pokemon;
@@ -122,10 +124,15 @@ public class PokeBatalla_controller {
         changePsBar(pokemon,ps_self);
         /*Para testeo*/
         pokemon_controller.updatePokemon();
+        updateDanoGrafico(damage,damage);
     }
 
     public void changePsBar(Pokemon pokemonToChange,ProgressBar psBar){
         Double porcentaje=(double) ((pokemonToChange.getActualLife() * 100) / pokemonToChange.getMaxLife()) / 100;
         psBar.setProgress(porcentaje);
+    }
+
+    public void updateDanoGrafico(int danoEnemigo,int danoMio){
+        controllerGrafico.danoUpdate(danoEnemigo,danoMio);
     }
 }

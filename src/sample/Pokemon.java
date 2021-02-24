@@ -6,7 +6,7 @@ public class Pokemon {
     private int maxLife;
     private int actualLife;
     private int lvl;
-    private String name;
+    public String name;
     private Image imagen;
 
     public Pokemon(String name ,int maxLife, int actualLife, int lvl,Image imagen) {

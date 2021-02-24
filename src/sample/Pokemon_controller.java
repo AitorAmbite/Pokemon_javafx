@@ -1,6 +1,7 @@
 package sample;
 
 import Batalla.PokeBatalla_controller;
+import Grafico.GraficoController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -25,6 +27,8 @@ public class Pokemon_controller {
     // botoncillo
     @FXML
     Button nextButton;
+    @FXML
+    Button BotonGrafico;
     @FXML
     GridPane fondoSeleccion;
     //labels de nombre
@@ -85,7 +89,8 @@ public class Pokemon_controller {
 
     /* Variables de ambito global para usar en todos los metodos */
     ArrayList<Label> pokeData = new ArrayList<Label>();
-    ArrayList<Pokemon> pokemons = new ArrayList<Pokemon>();
+    public ArrayList<Pokemon> pokemons = new ArrayList<Pokemon>();
+    public int[] vecesSeleccionPokemon = new int[6];
 
     /* VARIABLES USADAS PARA MANEJAR POKEMONS DEL ARRAY*/
 
@@ -142,6 +147,7 @@ public class Pokemon_controller {
         VBox box = (VBox) event.getSource();
         pokeData = iterateChildrens(box);
         selectPoke((Label) pokeData.get(0), (Label) pokeData.get(1), (Label) pokeData.get(2));
+        vecesSeleccionPokemon[Integer.parseInt(idPoke)]++;
     }
     public void onClickNext() throws IOException {
         getPokemonId();
@@ -213,6 +219,22 @@ public class Pokemon_controller {
         pokeName.setTextFill(Color.WHITE);
         pokeLife.setTextFill(Color.WHITE);
         pokeLvl.setTextFill(Color.WHITE);
+    }
+
+    public void abrirGraficos(MouseEvent event) {
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("BarrasGrafico.fxml"));
+            HBox root = (HBox) loader.load();
+            stage.show();
+
+            GraficoController graficoController = loader.getController();
+            graficoController.controlBarras(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
 }
